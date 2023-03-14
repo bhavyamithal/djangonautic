@@ -1,0 +1,10 @@
+{% extends 'base_layout.html' %}
+
+{% block content %}
+    <h1><a href="{% url 'articles:list' %}">Main list</a> </h1>
+    <h2>{{ article.title }}</h2>
+    <img src="{{ article.thumb.url }}">
+    <div class="article">
+        {{ article.body }}
+    </div>
+{% endblock %}
